@@ -1,11 +1,13 @@
 <template>
-
+  <ResultsPageWithResults />
 </template>
 <script>
+import withReviews from "~/components/hocs/withReviews";
+import ResultsPage from "~/components/pages/results";
+
+const ResultsPageWithResults = withReviews(ResultsPage)
+
 export default {
-  name: "results"
+  components: { ResultsPageWithResults }
 }
 </script>
-<style scoped>
-
-</style>

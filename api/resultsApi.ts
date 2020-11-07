@@ -1,4 +1,6 @@
 import {ApolloClient} from "apollo-client";
+import {InMemoryCache} from "apollo-cache-inmemory";
+
 import gql from 'graphql-tag'
 import {Result} from "~/models/Result";
 
@@ -6,15 +8,15 @@ export interface ResultsApi {
   getResults: () => Result[]
 }
 
-class ResultsApiImpl implements ResultsApi {
-  private client: ApolloClient;
+export class ResultsApiImpl implements ResultsApi {
+  private client: ApolloClient<InMemoryCache>;
 
-  constructor(client: ApolloClient<any>) {
+  constructor(client: ApolloClient<InMemoryCache>) {
     this.client = client;
   }
 
   public getResults = (): Result[] => {
-    gql`subscription tags($type: String!) {
+    const query = gql`subscription tags($type: String!) {
       tagAdded(type: $type) {
         id
         label
@@ -22,12 +24,6 @@ class ResultsApiImpl implements ResultsApi {
       }
     }`
 
-    return this.client.query({
-
-    })
+    // return this.client.query(query)
   }
-}
-
-export const createResultsApi = (client: ApolloClient): ResultsApi => {
-  return new ResultsApiImpl(client)
 }
