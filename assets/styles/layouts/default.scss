@@ -1,0 +1,25 @@
+@import "../theme.scss";
+
+.main-container {
+  background: $body-background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  & > .page {
+    width: 100%;
+    padding: 32px;
+    margin-top: 32px;
+
+    @media (max-width: $mobile-break-width) {
+      margin-top: 16px;
+    }
+    margin-bottom: 32px;
+    background: $page-background-color;
+    max-width: $page-width;
+    min-height: 800px;
+    box-shadow:  20px 20px 60px #d5d5d5,
+    -20px -20px 60px #ffffff;
+  }
+}

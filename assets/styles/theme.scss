@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,500,600,700');
+
+// @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+// Colors
+$grey-lighter: #EEE;
+$primary: #a93636;
+$danger: #fa3f52;
+
+$colors:(
+  "success":($primary, $grey-lighter),
+  "primary":($primary, $grey-lighter),
+  "danger":($danger, $grey-lighter)
+);
+
+// Font
+$weight-semibold: 500;
+
+// Font
+$family-sans-serif: 'Lato', sans-serif;
+$family-serif: $family-sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: $family-sans-serif;
+
+// Devider
+$divider-background-color: $grey-lighter;
+$divider-thickness: 1px;
+
+// Body
+$body-size: 15px;
+$body-color: #2b2b2b;
+$body-background-color: #f6f6f6;
+$page-background-color: #fafafa;
+
+// Section
+$section-padding: 3rem 0;
+
+// Breadcrumb
+$breadcrumb-item-color: #999;
+
+// Tabs
+$tabs-link-active-border-bottom-color: $primary;
+$tabs-link-active-color: $primary;
+$tabs-toggle-link-active-background-color: $primary;
+$tabs-toggle-link-active-border-color: $primary;
+
+// Title
+$title-color: #222;
+$title-strong-color: #121212;
+$subtitle-color: #444;
+$subtitle-strong-color: #333;
+$title-family: $family-secondary;
+
+// Nav
+$navbar-background-color: #FFF;
+$navbar-box-shadow-color: none;
+$navbar-box-shadow-size: 0;
+$navbar-item-color: #111;
+$navbar-item-hover-color: #111;
+$navbar-item-hover-background-color: transparent;
+
+// Modal
+$modal-background-background-color: rgba(#000000, 0.5);
+$modal-card-body-padding: 40px;
+$modal-card-head-padding: 40px;
+
+
+// Card
+$card-color: #333;
+$card-background-color: #FFF;
+$card-shadow: 0 0 0;
+$card-footer-border-top: 1px solid #EEE;
+
+// Footer
+$footer-background-color: #F6F6F6;
+
+$mobile-break-width: 640px;
+
+
+$page-width: 1000px;
+
+@media screen and (max-width: 1000px) {
+  $page-width: 800px;
+}
+
+@media screen and (min-width: 1000px) {
+  $page-width: 1200px;
+}
+
+.button {
+  .loading-overlay {
+    .loading-icon:after {
+      top: calc(50% - 0.5em);
+      left: calc(50% - 0.5em);
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+
+.title {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.title-mobile {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.tags {
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+@import "~bulma-divider/src/sass/index";

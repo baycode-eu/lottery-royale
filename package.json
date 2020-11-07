@@ -1,0 +1,47 @@
+{
+  "name": "lottery-royale",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/apollo": "^4.0.1-rc.4",
+    "apollo-client": "^2.6.10",
+    "apollo-link-http": "^1.5.17",
+    "buefy": "^0.9.4",
+    "bulma-divider": "^0.2.0",
+    "core-js": "^3.6.5",
+    "graphql-tag": "^2.11.0",
+    "nuxt": "^2.14.6",
+    "nuxt-buefy": "^0.4.3",
+    "nuxt-composition-api": "^0.11.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "subscriptions-transport-ws": "^0.9.18",
+    "vue": "^2.6.12",
+    "vue-apollo": "^3.0.5",
+    "vue-class-component": "^7.2.6"
+  },
+  "devDependencies": {
+    "@nuxt/babel-preset-app": "^2.14.7",
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.5.0",
+    "babel-preset-vca-jsx": "^0.3.6",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.5.0",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "vue-jest": "^3.0.4",
+    "vue-tsx-support": "^3.0.2"
+  }
+}

@@ -1,0 +1,23 @@
+.landing-page-template {
+  & > .first-contact-section {
+    background-color:green;
+    display: flex;
+
+    & > .welcome {
+      background-color:red;
+    }
+
+    & > .lottery-brief {
+      background-color:orange;
+    }
+  }
+
+
+  & > .lottery-win-grand {
+
+  }
+
+  & > .call-to-action {
+
+  }
+}

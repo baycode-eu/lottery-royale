@@ -1,0 +1,35 @@
+@import "~/assets/styles/theme.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  background: $page-background-color;
+  box-shadow:  20px 20px 60px #d5d5d5,
+  -20px -20px 60px #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 16px;
+
+  & > .header-contents {
+    display: flex;
+    width: 100%;
+    max-width: $page-width;
+    align-items: center;
+
+    @media (max-width: $mobile-break-width) {
+      justify-content:center;
+    }
+
+    padding-top: 8px;
+    padding-bottom: 12px;
+
+    & > .logo {
+      display: flex;
+      flex-direction: row;
+      line-height: 32px;
+      font-size: 32px;
+      color: $primary-dark;
+      font-weight: 300;
+    }
+  }
+}
+
