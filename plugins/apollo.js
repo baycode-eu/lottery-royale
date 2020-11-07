@@ -1,10 +1,20 @@
-import VueApollo from "vue-apollo";
-import Vue from 'vue'
-import {createGraphQlClient} from "~/api/graphQlClient";
-import {createResultsApi} from "~/api/resultsApi";
+import {ResultsApiImpl} from "~/api/resultsApi";
 import {HttpLink} from "apollo-link-http";
+import {ApolloClient} from "apollo-client";
+import {InMemoryCache} from "apollo-cache-inmemory";
 
-Vue.use(VueApollo)
+export const createResultsApi = (client) => {
+  return new ResultsApiImpl(client)
+}
+
+export const createGraphQlClient = (link) => {
+  return new ApolloClient({
+    link,
+    cache: new InMemoryCache({
+      addTypename: true
+    })
+  })
+}
 
 export default async ({
   app,
@@ -15,20 +25,7 @@ export default async ({
   const link = new HttpLink({ uri: "https://www.lottohelden.de/graphql"});
 
   const client = createGraphQlClient(link)
-
-  const graphql = new VueApollo({
-    client: {
-      results: 'results'
-    },
-    defaultClient: client,
-    defaultOptions: {},
-    errorHandler (error) {
-      console.log('Global error handler')
-      console.error(error)
-    },
-  })
-
-  inject('graphql', createResultsApi(graphql.defaultClient))
+  inject('graphql', createResultsApi(client));
 }
 
 

@@ -3,7 +3,9 @@
   <b-button class="button is-primary is-large" @click="() => $emit('clicked')">
     {{btnText}}
   </b-button>
-  <h4 class="subtitle is-6 discount">{{discount}}</h4>
+  <h4 class="subtitle is-6 discount">
+    {{discount}}
+  </h4>
 </div>
 </template>
 
