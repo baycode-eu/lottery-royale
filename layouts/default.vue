@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <app-header />
-    <copyrights-overlay/>
+    <copyrights-overlay />
     <div class="main-container">
       <div class="page">
         <nuxt />
@@ -14,11 +14,13 @@
 <script>
 import AppHeader from '~/components/organisms/layout/header'
 import AppFooter from '~/components/organisms/layout/footer'
+import CopyrightsOverlay from '~/components/organisms/layout/copyrights-overlay'
 
 export default {
   components: {
     AppHeader,
     AppFooter,
+    CopyrightsOverlay
   },
 
   mounted() {

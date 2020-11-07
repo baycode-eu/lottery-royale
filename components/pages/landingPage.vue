@@ -11,16 +11,21 @@
     </template>
     <template slot="lottery-win-grand">
       <lottery-win-grand
-        text="Everyone could win big money quickly, yet only those, who dare."
-        before-cta-text="No need to wait no more. Just imagine yourself having a penthouse, just because you were brave to test your luck."
+        before-cta-text="No need to wait no more. Imagine yourself having a penthouse, just because you were brave enough to test your luck."
         cta-text="Imagine yourself laying on the beach with a drink. Retire early, nothing more is needed. Lets do it now together."
       />
     </template>
     <template slot="call-to-action">
       <cta
         @clicked="ctaClicked"
-        time-is-clicking="And I want to get a discount of -70% for a first bet."
+        discount="And I want to get a -70% discount for a first bet."
         btn-text="I want to become a millionaire!"
+      />
+    </template>
+    <template slot="citation">
+      <citation
+        cite="Everyone could win big money quickly, yet only those win, who dare."
+        author="Sun Tzu"
       />
     </template>
   </landing-page-template>
@@ -33,9 +38,11 @@ import Cta from "~/components/organisms/landing/cta";
 import SocialProof from "~/components/organisms/landing/social-proof";
 import LotteryWinGrand from "~/components/organisms/landing/lottery-win-grand";
 import LotteryBrief from "~/components/organisms/landing/lottery-brief";
+import Citation from "~/components/organisms/landing/citation";
 
 export default  {
   components: {
+    Citation,
     Welcome,
     LandingPageTemplate,
     LotteryBrief,

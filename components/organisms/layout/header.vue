@@ -1,12 +1,12 @@
 <template>
-  <section class="header">
+  <header class="header">
     <div class="header-contents">
       <nuxt-link to="/" class="logo">
         <dice class="dice" />
         <span class="logo-text">Lottery Royale</span>
       </nuxt-link>
     </div>
-  </section>
+  </header>
 </template>
 
 <script>

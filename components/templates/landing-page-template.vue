@@ -14,8 +14,11 @@
     <section class="lottery-win-grand">
       <slot name="lottery-win-grand" />
     </section>
-    <section slot="call-to-action">
+    <section class="call-to-action">
       <slot name="call-to-action" />
+    </section>
+    <section class="citation">
+      <slot name="citation" />
     </section>
   </div>
 </template>
@@ -25,6 +28,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import "../../assets/styles/components/templates/landing-page-template.scss";
 </style>

@@ -15,6 +15,11 @@
     @media (max-width: $mobile-break-width) {
       margin-top: 16px;
     }
+
+    @media (min-width: $mobile-break-width) {
+      padding: 64px;
+    }
+
     margin-bottom: 32px;
     background: $page-background-color;
     max-width: $page-width;

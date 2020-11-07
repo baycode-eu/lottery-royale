@@ -1,12 +1,15 @@
 <template>
-<div>
-  XD
-</div>
+<h1 class="title is-2">
+  {{ text }}
+</h1>
 </template>
 
 <script>
 export default {
-  name: "WelcomeOrganism"
+  name: "WelcomeOrganism",
+  props: {
+    text: String
+  }
 }
 </script>
 

@@ -1,23 +1,24 @@
 .landing-page-template {
+
   & > .first-contact-section {
-    background-color:green;
-    display: flex;
-
-    & > .welcome {
-      background-color:red;
-    }
-
-    & > .lottery-brief {
-      background-color:orange;
+    .lottery-brief {
+      margin-top: 16px;
     }
   }
 
+  & > .social-proof {
+    margin-top: 32px;
+  }
 
   & > .lottery-win-grand {
-
+    margin-top: 48px;
   }
 
   & > .call-to-action {
+    margin-top: 48px;
+  }
 
+  & > .citation {
+    margin-top: 64px;
   }
 }
