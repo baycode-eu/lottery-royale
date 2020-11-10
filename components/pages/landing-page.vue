@@ -40,7 +40,7 @@ import LotteryWinGrand from "~/components/organisms/landing/lottery-win-grand";
 import LotteryBrief from "~/components/organisms/landing/lottery-brief";
 import Citation from "~/components/organisms/landing/citation";
 
-export default  {
+export default {
   components: {
     Citation,
     Welcome,
