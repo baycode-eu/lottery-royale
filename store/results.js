@@ -9,22 +9,17 @@ export const mutations = {
 }
 
 export const getters = {
-  results: () => state.results
+  results: (state) => state.results
 }
 
 export const actions = {
-  async getResults() {
-
-  },
-
   clearResults({commit}){
     commit('setResults', null)
   },
 
-  async reloadResults({commit}){
-    const results = await this.getResults()
-
-    commit('setResults', null)
+  async reloadResults({commit}, {type, limit}){
+    const results = await this.$graphql.getResults(type, limit)
+    commit('setResults', results)
   },
 }
 

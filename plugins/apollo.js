@@ -22,7 +22,7 @@ export default async ({
   redirect,
   route,
 }, inject) => {
-  const link = new HttpLink({ uri: "https://www.lottohelden.de/graphql"});
+  const link = new HttpLink({ uri: process.env.GRAPHQL_ENDPOINT});
 
   const client = createGraphQlClient(link)
   inject('graphql', createResultsApi(client));
