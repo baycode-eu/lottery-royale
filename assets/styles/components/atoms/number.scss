@@ -1,6 +1,7 @@
 @import "../../theme";
 
 .number-atom {
+  font-weight: bold;
   padding: 8px;
   width: 38px;
   border-radius: 32px;
@@ -9,4 +10,5 @@
 
 .additional {
   background-color: $primary;
+  color: white;
 }

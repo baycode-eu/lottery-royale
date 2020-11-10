@@ -1,6 +1,7 @@
 <template>
   <div class="number-grid">
     <number
+      class="number"
       v-for="(number, key) in numbers"
       :number="number"
       :additional="additional"
@@ -25,12 +26,9 @@ export default {
 <style lang="scss" scoped>
   .number-grid {
     display: flex;
-    width: 100%;
 
-    & > * {
-      display:flex;
-      flex-wrap: nowrap;
+    & > .number {
+      margin-right: 8px;
     }
   }
-
 </style>

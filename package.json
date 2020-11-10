@@ -17,6 +17,7 @@
     "buefy": "^0.9.4",
     "bulma-divider": "^0.2.0",
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
     "graphql-tag": "^2.11.0",
     "nuxt": "^2.14.6",
     "nuxt-buefy": "^0.4.3",

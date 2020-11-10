@@ -17,13 +17,5 @@
     { "src": "/_nuxt/.+" },
     { "src": "^/favicon.ico$", "dest": "/favicon.ico"},
     { "src": "/(.*)", "dest": "/" }
-  ],
-  "env": {
-    "GRAPHQL_ENDPOINT": "http://api.lottery-royale.baycode.eu"
-  },
-  "build": {
-    "env": {
-      "GRAPHQL_ENDPOINT": "http://api.lottery-royale.baycode.eu"
-    }
-  }
+  ]
 }

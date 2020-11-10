@@ -1,5 +1,5 @@
 export interface Odd {
-  numberOfWinners: String,
-  odd: String,
   winningClass: Number
+  odd: String,
+  numberOfWinners: String,
 }

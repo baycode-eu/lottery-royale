@@ -32,7 +32,17 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
 
   @media (max-width: $mobile-break-width) {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    & > .review {
+      width: 33%;
+      flex-grow: 1;
+      box-sizing: border-box;
+      margin: 0 5px 10px;
+      justify-content: space-between;
+    }
   }
 
   & > .review {

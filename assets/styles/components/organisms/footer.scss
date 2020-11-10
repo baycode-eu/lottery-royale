@@ -1,0 +1,18 @@
+@import "~/assets/styles/theme.scss";
+
+.footer {
+  z-index: 32;
+  justify-content: center;
+  text-align:center;
+  display: flex;
+  background: $page-background-color;
+  box-shadow:  20px 20px 60px #d5d5d5,
+  -20px -20px 60px #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 16px;
+
+  & > .entries {
+    font-size: 8px;
+  }
+}
+

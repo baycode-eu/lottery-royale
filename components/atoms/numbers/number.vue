@@ -9,7 +9,7 @@ export default {
   name: "number",
 
   props: {
-    number: Number,
+    number: String,
     additional: Boolean
   }
 }
