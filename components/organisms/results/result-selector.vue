@@ -1,17 +1,31 @@
 <template>
-  <b-select
-    :value="selectedResult"
-    @input="changeSelectedResult"
-    placeholder="Select a name"
-  >
-    <option
-      v-for="option in results"
-      :value="option"
-      :key="option.date"
+  <div class="result-selector">
+    <b-button
+      class="button is-primary"
+      :disabled="isFirstSelected"
+      @click="selectPrevious"
+    ><
+    </b-button>
+    <b-select
+      :value="selectedResult"
+      @input="changeSelectedResult"
+      placeholder="Loading dates"
     >
-      {{ option.date }}
-    </option>
-  </b-select>
+      <option
+        v-for="option in results"
+        :value="option"
+        :key="option.date"
+      >
+        {{ option.date }}
+      </option>
+    </b-select>
+    <b-button
+      class="button is-primary"
+      :disabled="isLastSelected"
+      @click="selectNext"
+    >>
+    </b-button>
+  </div>
 </template>
 
 <script>
@@ -20,6 +34,23 @@ name: "ResultSelector",
   methods: {
     changeSelectedResult(result) {
       this.$emit("selected", result)
+    },
+    selectNext() {
+      this.changeSelectedResult(this.results[this.currentSelectedIdx() + 1])
+    },
+    selectPrevious() {
+      this.changeSelectedResult(this.results[this.currentSelectedIdx() - 1])
+    },
+    currentSelectedIdx() {
+      return this.results.findIndex((item) => this.selectedResult === item)
+    }
+  },
+  computed: {
+    isLastSelected() {
+      return this.results && this.selectedResult === this.results[this.results.length - 1]
+    },
+    isFirstSelected() {
+      return this.results && this.selectedResult === this.results[0]
     }
   },
   props: {
@@ -29,6 +60,8 @@ name: "ResultSelector",
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .result-selector {
+    display: flex;
+  }
 </style>

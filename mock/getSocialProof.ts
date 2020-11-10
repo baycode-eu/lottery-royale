@@ -19,6 +19,6 @@ export default (): Review[] => {
       stars: 5,
       bet: 500,
       review: "I've bet everything I had. All in! Now instead of one Lambo I have 3. I rate 5/5 !!!"
-    }
+    },
   ]
 }
