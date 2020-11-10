@@ -1,4 +1,3 @@
-import 'vue-tsx-support/enable-check'
 require('dotenv').config()
 
 export default {
