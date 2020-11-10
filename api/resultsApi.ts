@@ -2,28 +2,46 @@ import {ApolloClient} from "apollo-client";
 import {InMemoryCache} from "apollo-cache-inmemory";
 
 import gql from 'graphql-tag'
-import {Result} from "~/models/Result";
+import { Result } from "~/models/Result";
+import { ResultsResponse } from "~/api/responses/ResultsResponse.ts";
 
 export interface ResultsApi {
-  getResults: () => Result[]
+  getResults: (type?: string, limit?: number) => Promise<Result[]>
 }
 
 export class ResultsApiImpl implements ResultsApi {
-  private client: ApolloClient<InMemoryCache>;
+  private _client: ApolloClient<InMemoryCache>;
 
   constructor(client: ApolloClient<InMemoryCache>) {
-    this.client = client;
+    this._client = client;
   }
 
-  public getResults = (): Result[] => {
-    const query = gql`subscription tags($type: String!) {
-      tagAdded(type: $type) {
-        id
-        label
-        type
-      }
-    }`
+  public getResults = async (type?: string, limit?: number): Promise<Result[]> => {
+    const query = gql`
+      query draws($type: String!, $limit: Int = 10) {
+        draw(type: $type, limit: $limit) {
+          draws {
+            date
+            additionalNumbers
+            jackpot
+            numbers
+            odds {
+              numberOfWinners
+              odd
+              winningClass
+            }
+          }
+        }
+      }`
 
-    // return this.client.query(query)
+    const {data} = await this._client.query<ResultsResponse>({
+      query,
+      variables: {
+        type,
+        limit
+      }
+    })
+
+    return data.draw.draws
   }
 }

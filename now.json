@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "name": "lottery-royale",
+  "regions": ["bru"],
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {
+        "serverFiles": [
+          "server-middleware/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/_nuxt/.+" },
+    { "src": "^/favicon.ico$", "dest": "/favicon.ico"},
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "GRAPHQL_ENDPOINT": "http://api.lottery-royale.baycode.eu"
+  },
+  "build": {
+    "env": {
+      "GRAPHQL_ENDPOINT": "http://api.lottery-royale.baycode.eu"
+    }
+  }
+}

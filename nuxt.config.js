@@ -21,7 +21,7 @@ export default {
 
   plugins: [
     '~/plugins/buefy.js',
-    // '~/plugins/apollo.js'
+    '~/plugins/apollo.js'
   ],
 
   components: true,
@@ -31,9 +31,14 @@ export default {
   },
 
   buildModules: [
+    '@nuxtjs/dotenv',
     '@nuxt/typescript-build',
     'nuxt-composition-api',
   ],
+
+  env: {
+    GRAPHQL_ENDPOINT: process.env.GRAPHQL_ENDPOINT || 'http://localhost:8010/proxy/graphql',
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

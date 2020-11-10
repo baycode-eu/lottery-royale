@@ -1,5 +1,9 @@
 <template>
-$END$
+  <div>
+    <slot name="result-date-selector" />
+    <slot name="jackpot-numbers" />
+    <slot name="odds" />
+  </div>
 </template>
 
 <script>

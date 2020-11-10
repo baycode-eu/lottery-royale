@@ -2,8 +2,8 @@
   <LandingPageWithReviews />
 </template>
 <script>
-import LandingPage from "../components/pages/landingPage"
-import withReviews from "~/components/hocs/withReviews";
+import LandingPage from "../components/pages/landing-page"
+import withReviews from "~/components/hocs/with-reviews";
 
 const LandingPageWithReviews = withReviews(LandingPage)
 

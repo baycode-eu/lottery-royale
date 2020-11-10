@@ -2,10 +2,10 @@
   <ResultsPageWithResults />
 </template>
 <script>
-import withReviews from "~/components/hocs/withReviews";
+import withResults from "~/components/hocs/with-results";
 import ResultsPage from "~/components/pages/results";
 
-const ResultsPageWithResults = withReviews(ResultsPage)
+const ResultsPageWithResults = withResults(ResultsPage)
 
 export default {
   components: { ResultsPageWithResults }
