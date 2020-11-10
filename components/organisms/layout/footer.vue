@@ -11,13 +11,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-name: "footer"
-}
-</script>
-
 <style lang="scss" scoped>
 @import "~/assets/styles/components/organisms/footer.scss";
 </style>
